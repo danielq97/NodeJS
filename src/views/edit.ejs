@@ -1,0 +1,52 @@
+<% include partials/_header %>
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-5 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <!--Método post para actualizar-->
+                    <form action="/edit/<%= user._id %>" method="POST">
+                        <p>Firstname</p>
+                        <div class="form-group">
+                            <input type="text" name="name.firstname" placeholder="Insert a firstname"
+                                class="form-control" value="<%= user.name.firstname %>">
+                        </div>
+                        <p>Lastname</p>
+                        <div class="form-group">
+                            <input type="text" name="name.lastname" placeholder="Insert a lastname" class="form-control"
+                                value="<%= user.name.lastname %>">
+                        </div>
+                        <p>Username</p>
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="Insert a username" class="form-control"
+                                value="<%= user.username %>">
+                        </div>
+                        <p>Type of identification</p>
+                        <div class="form-group">
+                            <input type="text" name="identification.type1" placeholder="Insert a type"
+                                class="form-control" value="<%= user.identification.type1 %>">
+                        </div>
+                        <p>Number of identification</p>
+                        <div class="form-group">
+                            <input type="text" name="identification.number"
+                                placeholder="Insert number of identification" class="form-control"
+                                value="<%= user.identification.number %>">
+                        </div>
+                        <p>Password</p>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Insert password"
+                                class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Edit</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/_footer %>
